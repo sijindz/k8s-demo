@@ -9,23 +9,17 @@ import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
 @RestController
-@RequestMapping("/api/k8s")
+@RequestMapping("/")
 public class K8sDemoApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(K8sDemoApplication.class, args);
 	}
 
-	@GetMapping("/aks")
-	public ResponseEntity<String> testAks()
+	@GetMapping("")
+	public ResponseEntity<String> testBase()
 	{
-		return ResponseEntity.ok("Welcome to Azure AKS demo");
-	}
-
-	@GetMapping("/eks")
-	public ResponseEntity<String> testEks()
-	{
-		return ResponseEntity.ok("Welcome to AWS EKS demo");
+		return ResponseEntity.ok("Successful");
 	}
 
 }
